@@ -4,7 +4,7 @@ html, body, a, img {
     border: 0px;
     text-decoration: none;
     color: #ffffff;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'proxima_nova_regular', Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -24,6 +24,20 @@ a:focus {
 a:hover {
     color: #ed1c24;
     text-decoration: underline;
+}
+
+@font-face {
+    font-family: 'proxima_nova_regular';
+    src: url('../fonts/ProximaNova-Regular.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_bold';
+    src: url('../fonts/ProximaNova-Bold.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 .ace-page-header {
@@ -84,3 +98,12 @@ footer .container .copyright-row {
     color : #939393;
 }
 
+.our-features-container {
+    background: url("/images/ourfeatures-bg.jpg");
+}
+
+.our-features-container h2 {
+    font-family: 'proxima_nova_bold', Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    border-bottom: 1px solid #ffffff ;
+}
