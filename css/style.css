@@ -1,10 +1,11 @@
-html, body, a, img {
+html, body, a, img, p, h1, h2, h3 {
     margin: 0px;
     padding: 0px;
     border: 0px;
     text-decoration: none;
     color: #ffffff;
     font-family: 'proxima_nova_regular', Arial, Helvetica, sans-serif;
+    font-weight: normal;
 }
 
 body {
@@ -17,14 +18,12 @@ a:focus,
 a:hover,
 a:active {
     outline: 0 !important;
+    color: #ffffff  !important;;
 }
 a:focus {
     text-decoration: none;
 }
-a:hover {
-    color: #ed1c24;
-    text-decoration: underline;
-}
+
 
 @font-face {
     font-family: 'proxima_nova_regular';
@@ -40,13 +39,34 @@ a:hover {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'proxima_nova_semibold';
+    src: url('../fonts/ProximaNova-Semibold.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 .ace-page-header {
-    background: #000000;
+    background: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    z-index: 300;
     padding: 24px 0;
+    width: 100%;
     transition: background 0.3s ease-in-out 0s, padding 0.3s ease-in-out 0s;
     margin:0;
     border:0;
     border-radius: 0;
+}
+
+.ace-page-header div:first-of-type, .ace-page-header .container .logo-container img {
+    transition:  width 0.3s ease-in-out 0.3s, height 0.9s ease-in-out 0.9s;
+}
+
+.ace-page-header .pull-right a:hover, .ace-page-header .pull-right a:active, .ace-page-header .pull-right a:focus {
+    border-bottom: 1px solid #ed1c24;
+    color: #ffffff !important;
 }
 
 .ace-page-header .container .row {
@@ -56,6 +76,42 @@ a:hover {
 .ace-page-header .nav li a {
     display: inline;
     color: #ffffff;
+    padding: 0 0 4px 0;
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+
+.ace-page-header.fixed-nav {
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 300;
+    width: 100%;
+    padding: 8px 10px;
+}
+
+.ace-page-header.fixed-nav .container {
+    width: 100%;
+}
+
+.ace-page-header.fixed-nav .container .logo-container img {
+    height:36px;
+}
+
+
+.ace-page-header li.dropdown.open a, .ace-page-header li.dropdown.open a:hover, .ace-page-header li.dropdown.open a:active,
+.ace-page-header li.dropdown.open a:focus{
+    background: none;
+}
+
+.ace-page-header .dropdown-menu {
+    background: rgba(0,0,0,0.6);
+    z-index: 110;
+    border-radius: 10px !important;
+    line-height: 16px;
+    padding: 10px;
+
 }
 
 .red-line {
@@ -73,9 +129,62 @@ a:hover {
     padding: 0;
     margin: 0;
     width:100%;
+    background: #000000;
+    position: relative;
+}
+
+.slider-container .slider-caption {
+    z-index: 200;
+    font-family: 'proxima_nova_semibold', Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+}
+
+.slider-container .slider-caption div {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.slider-container .slider-caption div.first-line {
+    font-size: 100px;
+    line-height: 100px;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+}
+
+.slider-container .slider-caption div.second-line {
+    font-size: 40px;
+    line-height: 40px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    margin-bottom: 40px;
+}
+
+.slider-container .slider-caption .btn {
+    background: #ed1c24;
+    border-radius: 10px;
+    font-size: 24px;
+    line-height: 18px;
+    padding: 24px 56px 24px 56px;
+
+}
+
+.tp-bullets.simplebullets.round .bullet {
+    width: 14px;
+    height: 14px;
+    background: rgba(255, 255, 255, 0.6);
+    margin-left: 15px;
+    border-radius: 100%;
+}
+.tp-bullets.simplebullets .bullet:hover, .tp-bullets.simplebullets .bullet.selected {
+    background: #ed1c24;
+}
+
+.tp-bannertimer {
+    display: none;
 }
 
 footer {
+    font-family: 'proxima_nova_regular', Arial, Helvetica, sans-serif;
     background: #000000;
     bottom: 0;
 
@@ -100,10 +209,92 @@ footer .container .copyright-row {
 
 .our-features-container {
     background: url("/images/ourfeatures-bg.jpg");
+    position: relative;
+    width:100%;
+    text-align: center;
+    padding-top: 108px;
+    padding-bottom: 228px;
 }
 
-.our-features-container h2 {
+.our-features-container::before {
+    background: rgba(216, 26, 33, 0.7) none repeat scroll 0 0;
+    content: " ";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.our-features-container .features-title h2 {
     font-family: 'proxima_nova_bold', Arial, Helvetica, sans-serif;
     font-size: 48px;
-    border-bottom: 1px solid #ffffff ;
+    margin : 0;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.our-features-container .features-title {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 160px;
+}
+
+.our-features-container .features-title h2::after {
+    background: #ffffff none repeat scroll 0 0;
+    bottom: 0;
+    content: " ";
+    height: 12px;
+    left: 45%;
+    margin-left: -35px;
+    position: absolute;
+    width: 180px;
+    top:60px;
+}
+
+.our-features-container .feature-box {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    max-width: 345px;
+    line-height: 18px;
+    padding-bottom: 25px;
+    padding-top: 18px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.our-features-container .feature-box:first-of-type {
+    margin-right: 66px;
+}
+
+.our-features-container .feature-box:last-of-type {
+    margin-left: 66px;
+}
+
+
+.our-features-container .box-img {
+    height:45px;
+    vertical-align: middle;
+}
+
+.our-features-container .box-img::before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;  /* vertical alignment of the inline element */
+    height: 100%;
+}
+
+.our-features-container h3 {
+    font-family: 'proxima_nova_bold', Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    padding-bottom: 26px;
+    padding-top: 15px;
+    font-weight: bold;
+}
+
+.our-features-container p {
+    font-family: 'proxima_nova_regular', Arial, Helvetica, sans-serif;
+    font-size: 15.5px;
 }

@@ -11,17 +11,19 @@
     <!--<link rel="shortcut icon" href="favicon.ico">-->
     <!-- CSS Global Compulsory -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-formhelpers.min.css">
 
     <link rel="stylesheet" href="css/rs-plugin/settings.css" type="text/css" media="screen">
     <!--[if lt IE 9]><link rel="stylesheet" href="css/rs-plugin/settings-ie8.css" type="text/css" media="screen"><![endif]-->
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <nav class="ace-page-header navbar navbar-default" role="navigation">
     <div class="container">
         <div class="row">
-            <div class="pull-left">
+            <div class="pull-left logo-container">
                 <a href="#"><img src="images/logo.png"> </a>
             </div>
             <div class="pull-right">
@@ -31,9 +33,9 @@
                 </ul>
 
                 <ul class="language-selector nav navbar-nav">
-                    <li class="dropdown"><a  class="dropdown-toggle" data-toggle="dropdown" href="#">Eng <span class="caret"></span></a>
+                    <li class="dropdown"><a  class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="bfh-languages" data-language="en_US" data-flags="true"></span> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Rus</a></li>
+                        <li><span class="bfh-languages" data-language="ru_RU" data-flags="true"></span></li>
                     </ul>
                     </li>
                 </ul>
@@ -49,51 +51,52 @@
     <div class="slider-container">
         <div class="hero-slider">
             <ul>
-                <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" >
+                <li data-transition="boxfade" data-slotamount="7" data-masterspeed="1000" >
                     <img src="images/slides/slide-1.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
-                    <div class="tp-caption lightgrey_divider skewfromrightshort fadeout"
-                         data-x="85"
-                         data-y="224"
-                         data-speed="500"
-                         data-start="1200"
-                         data-easing="Power4.easeOut">My Caption
-                    </div>
-
                 </li>
-                <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" >
+                <li data-transition="boxfade" data-slotamount="7" data-masterspeed="1000" >
                     <img src="images/slides/slide-2.jpg"  alt="darkblurbg"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
-                    <div class="tp-caption lightgrey_divider skewfromrightshort fadeout"
-                         data-x="85"
-                         data-y="224"
-                         data-speed="500"
-                         data-start="1200"
-                         data-easing="Power4.easeOut">My Caption
-                    </div>
-
                 </li>
             </ul>
+        </div>
+        <div class="slider-caption">
+            <div class="first-line">Life is <span class="red">About Timing</span></div>
+            <div class="second-line">Just play. <span class="red">Have time.</span> Enjoy the game</div>
+            <div><a href="#" class="btn">Create my free account</a></div>
         </div>
     </div>
 </section>
 <section id="our-features">
-    <div class="container our-features-container">
-        <h2>OUR FEATURES</h2>
-        <div class="feature-box">
-            <img src="/images/soccer-ball.png">
-            <h3>100% TRANSPARENT</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    <div class="our-features-container">
+        <div class="container">
+            <div class="features-title">
+                <h2>OUR FEATURES</h2>
+            </div>
+            <div class="row">
+                <div class="feature-box col-md-4 col-sm-6">
+                    <div class="box-img">
+                        <img src="/images/soccer-ball.png">
+                    </div>
+                    <h3>100% TRANSPARENT</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="feature-box col-md-4 col-sm-6">
+                    <div class="box-img">
+                        <img src="/images/basketball-ball.png">
+                    </div>
+                    <h3>100% TRANSPARENT</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="feature-box col-md-4 col-sm-6">
+                    <div class="box-img">
+                        <img src="/images/hockey-ball.png">
+                    </div>
+                    <h3>100% TRANSPARENT</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+            <div class="red-overlay"></div>
         </div>
-        <div class="feature-box">
-            <img src="/images/basketball-ball.png-ball.png">
-            <h3>100% TRANSPARENT</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </div>
-        <div class="feature-box">
-            <img src="/images/hockey-ball.png-ball.png">
-            <h3>100% TRANSPARENT</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </div>
-        <div class="red-overlay"></div>
     </div>
 </section>
 <footer>
@@ -117,6 +120,7 @@
 <!-- JS Global Compulsory -->
 <script src="js/jquery-1.12.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-formhelpers.min.js"></script>
 <!-- JS Plugins -->
 <script src="js/rs-plugin/jquery.themepunch.tools.min.js"></script>
 <script src="js/rs-plugin/jquery.themepunch.revolution.min.js"></script>
